@@ -11,15 +11,17 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module" module-name="money-tck" />
+    <orderEntry type="library" name="Maven: org.mutabilitydetector:MutabilityDetector:0.9.1" level="project" />
+    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.2" level="project" />
+    <orderEntry type="library" name="Maven: com.google.code.findbugs:jsr305:1.3.9" level="project" />
     <orderEntry type="module" module-name="money-api" />
     <orderEntry type="library" name="Maven: org.testng:testng:6.8.5" level="project" />
     <orderEntry type="library" name="Maven: junit:junit:4.10" level="project" />
-    <orderEntry type="library" name="Maven: org.hamcrest:hamcrest-core:1.1" level="project" />
     <orderEntry type="library" name="Maven: org.beanshell:bsh:2.0b4" level="project" />
     <orderEntry type="library" name="Maven: com.beust:jcommander:1.27" level="project" />
     <orderEntry type="library" name="Maven: org.yaml:snakeyaml:1.6" level="project" />
-    <orderEntry type="module" module-name="jboss-test-audit-api" />
-    <orderEntry type="module" module-name="jboss-test-audit-impl" />
+    <orderEntry type="library" name="Maven: org.jboss.test-audit:jboss-test-audit-api:1.1.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.jboss.test-audit:jboss-test-audit-impl:1.1.0.Final" level="project" />
     <orderEntry type="module" module-name="moneta" />
   </component>
 </module>
