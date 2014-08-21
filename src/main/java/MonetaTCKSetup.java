@@ -16,6 +16,7 @@
 
 import org.javamoney.moneta.FastMoney;
 import org.javamoney.moneta.function.MonetaryFunctions;
+import org.javamoney.moneta.function.MonetaryUtil;
 import org.javamoney.tck.JSR354TestConfiguration;
 
 import javax.money.MonetaryOperator;
@@ -74,14 +75,14 @@ public final class MonetaTCKSetup implements JSR354TestConfiguration {
     @Override
     public Collection<MonetaryOperator> getMonetaryOperators4Test() {
         List<MonetaryOperator> ops = new ArrayList<>();
-        ops.add(MonetaryFunctions.majorPart());
-        ops.add(MonetaryFunctions.minorPart());
-        ops.add(MonetaryFunctions.percent(BigDecimal.ONE));
-        ops.add(MonetaryFunctions.percent(3.5));
-        ops.add(MonetaryFunctions.permil(10.3));
-        ops.add(MonetaryFunctions.permil(BigDecimal.ONE));
-        ops.add(MonetaryFunctions.permil(10.5, MathContext.DECIMAL32));
-        ops.add(MonetaryFunctions.reciprocal());
+        ops.add(MonetaryUtil.majorPart());
+        ops.add(MonetaryUtil.minorPart());
+        ops.add(MonetaryUtil.percent(BigDecimal.ONE));
+        ops.add(MonetaryUtil.percent(3.5));
+        ops.add(MonetaryUtil.permil(10.3));
+        ops.add(MonetaryUtil.permil(BigDecimal.ONE));
+        ops.add(MonetaryUtil.permil(10.5, MathContext.DECIMAL32));
+        ops.add(MonetaryUtil.reciprocal());
         ops.add(MonetaryRoundings.getDefaultRounding());
         ops.add(MonetaryConversions.getConversion("EUR"));
         return ops;
