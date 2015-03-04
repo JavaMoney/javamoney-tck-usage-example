@@ -14,16 +14,11 @@
  * the License.
  */
 
-import org.javamoney.moneta.FastMoney;
-import org.javamoney.moneta.function.MonetaryFunctions;
-import org.javamoney.moneta.function.MonetaryUtil;
 import org.javamoney.tck.JSR354TestConfiguration;
 
 import javax.money.MonetaryOperator;
 import javax.money.MonetaryRoundings;
 import javax.money.convert.MonetaryConversions;
-import java.math.BigDecimal;
-import java.math.MathContext;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
@@ -35,7 +30,7 @@ import java.util.List;
  * <p>
  * Created by Anatole Tresch on 14.06.2014.
  */
-public final class MonetaTCKSetup implements JSR354TestConfiguration {
+public final class TCKTestSetup implements JSR354TestConfiguration {
 
     /**
      * Provide the MonetaryAmount implementation classes to be tested for immutability and other
@@ -46,7 +41,7 @@ public final class MonetaTCKSetup implements JSR354TestConfiguration {
     @Override
     public Collection<Class> getAmountClasses() {
         return Arrays
-                .asList(new Class[]{FastMoney.class, FastMoney.class});
+                .asList(new Class[]{MyMoney.class});
     }
 
     /**
@@ -59,8 +54,8 @@ public final class MonetaTCKSetup implements JSR354TestConfiguration {
     public Collection<Class> getCurrencyClasses() {
         try {
             return Arrays
-                    .asList(new Class[]{Class.forName("org.javamoney.moneta.internal.JDKCurrencyAdapter")});
-        } catch (ClassNotFoundException e) {
+                    .asList(new Class[]{MyCurrency.class});
+        } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Currency class not lodable: org.javamoney.moneta.internal.JDKCurrencyAdapter");
         }
@@ -75,14 +70,6 @@ public final class MonetaTCKSetup implements JSR354TestConfiguration {
     @Override
     public Collection<MonetaryOperator> getMonetaryOperators4Test() {
         List<MonetaryOperator> ops = new ArrayList<>();
-        ops.add(MonetaryUtil.majorPart());
-        ops.add(MonetaryUtil.minorPart());
-        ops.add(MonetaryUtil.percent(BigDecimal.ONE));
-        ops.add(MonetaryUtil.percent(3.5));
-        ops.add(MonetaryUtil.permil(10.3));
-        ops.add(MonetaryUtil.permil(BigDecimal.ONE));
-        ops.add(MonetaryUtil.permil(10.5, MathContext.DECIMAL32));
-        ops.add(MonetaryUtil.reciprocal());
         ops.add(MonetaryRoundings.getDefaultRounding());
         ops.add(MonetaryConversions.getConversion("EUR"));
         return ops;
