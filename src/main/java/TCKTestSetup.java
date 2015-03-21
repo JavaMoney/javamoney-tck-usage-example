@@ -57,7 +57,7 @@ public final class TCKTestSetup implements JSR354TestConfiguration {
                     .asList(new Class[]{MyCurrency.class});
         } catch (Exception e) {
             e.printStackTrace();
-            throw new RuntimeException("Currency class not lodable: org.javamoney.moneta.internal.JDKCurrencyAdapter");
+            throw new RuntimeException("Currency class not lodable: org.javamoney.moneta.internal.format.JDKCurrencyAdapter");
         }
     }
 
