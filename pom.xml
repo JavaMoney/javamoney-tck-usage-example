@@ -44,8 +44,8 @@
     <properties>
         <!-- ************ TCK Setup ****************** -->
         <!-- 1) JSR API version to be used. -->
-        <jsr.version>1.0-RC3</jsr.version>
-        <api.artifactId>moneta</api.artifactId>
+        <api.version>1.0-RC3</api.version>
+        <api.artifactId>money-api</api.artifactId>
         <!-- 2) TCK version to be used. -->
         <org.javamoney.tck.version>1.0-SNAPSHOT</org.javamoney.tck.version>
         <!-- 3) Your implementation artifact to be tested. -->
@@ -256,6 +256,12 @@
             <artifactId>${impl.artifactId}</artifactId>
             <type>${impl.packageType}</type>
             <version>${impl.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.money</groupId>
+            <artifactId>${api.artifactId}</artifactId>
+            <type>jar</type>
+            <version>${api.version}</version>
         </dependency>
         <dependency>
             <groupId>org.testng</groupId>
