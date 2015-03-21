@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.javamoney</groupId>
         <artifactId>javamoney-parent</artifactId>
-        <version>0.5</version>
+        <version>1.0-RC3</version>
     </parent>
 
     <artifactId>money-ritest</artifactId>
@@ -20,12 +20,12 @@
 
     <version>1.0-SNAPSHOT</version>
 
-    <name>JSR 354 - TCK Tests RI</name>
+    <name>JSR 354 - TCK Test (Java8)</name>
     <url>http://java.net/projects/javamoney</url>
     <inceptionYear>2012</inceptionYear>
     <description>JSR 354 provides an API for representing, transporting, and performing comprehensive calculations with
         Money and Currency.
-        This module executes the JSR 354 TCK and tests the current JSR 354 Reference Implementation.
+        This module executes the JSR 354 TCK and tests the current JSR 354 Reference Implementation impl. based on Java 8.
     </description>
 
     <organization>
@@ -36,7 +36,7 @@
         <license>
             <name>Apache 2 License</name>
             <comments>Spec</comments>
-            <url>LICENSE.html</url>
+            <url>LICENSE.txt</url>
             <distribution>repo</distribution>
         </license>
     </licenses>
@@ -44,17 +44,18 @@
     <properties>
         <!-- ************ TCK Setup ****************** -->
         <!-- 1) JSR API version to be used. -->
-        <jsr.version>1.0-SNAPSHOT</jsr.version>
+        <jsr.version>1.0-RC3</jsr.version>
+        <api.artifactId>moneta</api.artifactId>
         <!-- 2) TCK version to be used. -->
         <org.javamoney.tck.version>1.0-SNAPSHOT</org.javamoney.tck.version>
-        <!-- 3) Your implementation artifact to be tested.
+        <!-- 3) Your implementation artifact to be tested. -->
 		<impl.groupId>org.javamoney</impl.groupId>
 		<impl.artifactId>moneta</impl.artifactId>
-		<impl.version>1.0-SNAPSHOT</impl.version>
-		<impl.packageType>jar</impl.packageType> -->
+		<impl.version>1.0-RC3</impl.version>
+		<impl.packageType>jar</impl.packageType>
 
         <!-- ************ Other settings, Should normally not be changed. ************ -->
-        <jdkVersion>1.8</jdkVersion>
+        <jdkVersion>1.7</jdkVersion>
         <maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
         <maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -232,11 +233,6 @@
     </scm>
 
     <distributionManagement>
-        <site>
-            <id>javamoney.java.net-site</id>
-            <url>scm:svn:https://svn.java.net/svn/javamoney-maven-site</url>
-            <name>Java Net Public SVN Site Repository</name>
-        </site>
         <repository>
             <id>sonatype-nexus-staging</id>
             <url>http://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
@@ -255,12 +251,12 @@
             <artifactId>javamoney-tck</artifactId>
             <version>${org.javamoney.tck.version}</version>
         </dependency>
-        <!-- dependency>
+        <dependency>
             <groupId>${impl.groupId}</groupId>
             <artifactId>${impl.artifactId}</artifactId>
             <type>${impl.packageType}</type>
             <version>${impl.version}</version>
-        </dependency -->
+        </dependency>
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
