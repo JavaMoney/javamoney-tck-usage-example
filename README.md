@@ -1,9 +1,7 @@
-jsr354-ritest
-=============
+Javamoney Usage Example for the JSR 354 TCK
+===========================================
 
-Test Project illustrating how an implementation can be tested using the TCK. The moneta reference implementation is used 
-hereby.
-
+Test Project illustrating how an implementation can be tested using the JSR 354 TCK.
 The TCK can be started either:
 
 * by running 
