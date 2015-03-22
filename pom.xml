@@ -43,11 +43,14 @@
 
     <properties>
         <!-- ************ TCK Setup ****************** -->
+
         <!-- 1) JSR API version to be used. -->
         <api.version>1.0-RC3</api.version>
         <api.artifactId>money-api</api.artifactId>
+
         <!-- 2) TCK version to be used. -->
         <org.javamoney.tck.version>1.0-SNAPSHOT</org.javamoney.tck.version>
+
         <!-- 3) Your implementation artifact to be tested. -->
 		<impl.groupId>org.javamoney</impl.groupId>
 		<impl.artifactId>moneta</impl.artifactId>
@@ -55,15 +58,11 @@
 		<impl.packageType>jar</impl.packageType>
 
         <!-- ************ Other settings, Should normally not be changed. ************ -->
-        <jdkVersion>1.7</jdkVersion>
+        <jdkVersion>1.8</jdkVersion>
         <maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
         <maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <moduleDir>.</moduleDir>
-        <basedir>.</basedir>
-        <license.licenseName>jcp_spec</license.licenseName>
-        <license.licenseResolver>src/license</license.licenseResolver>
     </properties>
 
     <developers>
