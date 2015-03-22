@@ -45,7 +45,7 @@
         <!-- ************ TCK Setup ****************** -->
 
         <!-- 1) JSR API version to be used. -->
-        <api.version>1.0-RC3</api.version>
+        <api.version>1.0-SNAPSHOT</api.version>
         <api.artifactId>money-api</api.artifactId>
 
         <!-- 2) TCK version to be used. -->
@@ -54,7 +54,7 @@
         <!-- 3) Your implementation artifact to be tested. -->
 		<impl.groupId>org.javamoney</impl.groupId>
 		<impl.artifactId>moneta</impl.artifactId>
-		<impl.version>1.0-RC3</impl.version>
+		<impl.version>1.0-SNAPSHOT</impl.version>
 		<impl.packageType>jar</impl.packageType>
 
         <!-- ************ Other settings, Should normally not be changed. ************ -->

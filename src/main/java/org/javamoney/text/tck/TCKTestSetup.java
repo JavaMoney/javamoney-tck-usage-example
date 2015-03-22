@@ -15,6 +15,9 @@
  */
 package org.javamoney.text.tck;
 
+import org.javamoney.moneta.FastMoney;
+import org.javamoney.moneta.Money;
+import org.javamoney.moneta.internal.JDKCurrencyAdapter;
 import org.javamoney.tck.JSR354TestConfiguration;
 
 import javax.money.MonetaryOperator;
@@ -42,7 +45,7 @@ public final class TCKTestSetup implements JSR354TestConfiguration {
     @Override
     public Collection<Class> getAmountClasses() {
         return Arrays
-                .asList(new Class[]{MyMoney.class});
+                .asList(new Class[]{Money.class, FastMoney.class});
     }
 
     /**
@@ -55,7 +58,7 @@ public final class TCKTestSetup implements JSR354TestConfiguration {
     public Collection<Class> getCurrencyClasses() {
         try {
             return Arrays
-                    .asList(new Class[]{MyCurrency.class});
+                    .asList(new Class[]{JDKCurrencyAdapter.class});
         } catch (Exception e) {
             e.printStackTrace();
             throw new RuntimeException("Currency class not lodable: org.javamoney.moneta.internal.format.JDKCurrencyAdapter");
