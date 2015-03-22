@@ -9,5 +9,4 @@ public class RunTCK{
     public void runTCK(){
         TCKRunner.main(new String[0]);
     }
-
 }
