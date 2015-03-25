@@ -12,7 +12,7 @@
     <parent>
         <groupId>org.javamoney</groupId>
         <artifactId>javamoney-parent</artifactId>
-        <version>1.0-RC3</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <artifactId>javamoney-tck-usage-example</artifactId>
@@ -21,17 +21,12 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>JSR 354 - TCK Test (Java8)</name>
-    <url>http://java.net/projects/javamoney</url>
-    <inceptionYear>2012</inceptionYear>
+
     <description>JSR 354 provides an API for representing, transporting, and performing comprehensive calculations with
         Money and Currency.
         This module executes the JSR 354 TCK and tests the current JSR 354 Reference Implementation impl. based on Java 8.
     </description>
 
-    <organization>
-        <name>JavaMoney</name>
-        <url>http://javamoney.org</url>
-    </organization>
     <licenses>
         <license>
             <name>Apache 2 License</name>
@@ -65,47 +60,15 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
 
-    <developers>
-        <developer>
-            <id>atsticks</id>
-            <name>Anatole Tresch</name>
-            <organization>Credit Suisse</organization>
-            <roles>
-                <role>Specification Lead</role>
-            </roles>
-        </developer>
-    </developers>
-
     <ciManagement>
         <system>Travis CI</system>
         <url>https://travis-ci.org/JavaMoney/javamoney-tck-usage-example</url>
     </ciManagement>
 
-    <mailingLists>
-        <mailingList>
-            <name>JSR354 Issues List</name>
-            <subscribe>https://java.net/projects/javamoney/lists</subscribe>
-            <unsubscribe>https://java.net/projects/javamoney/lists</unsubscribe>
-            <archive>https://java.net/projects/javamoney/lists/issues/archive</archive>
-            <post>issues@javamoney.java.net</post>
-        </mailingList>
-        <mailingList>
-            <name>JSR354 Public Mailing List</name>
-            <subscribe>https://java.net/projects/javamoney/lists</subscribe>
-            <unsubscribe>https://java.net/projects/javamoney/lists</unsubscribe>
-            <archive>http://java.net/projects/javamoney/lists/jcurrency_mail/archive</archive>
-            <post>jcurrency_mail@javamoney.java.net</post>
-        </mailingList>
-    </mailingLists>
-
     <issueManagement>
         <system>JIRA</system>
         <url>http://java.net/jira/browse/JAVAMONEY</url>
     </issueManagement>
-
-    <prerequisites>
-        <maven>3.0.4</maven>
-    </prerequisites>
 
     <scm>
         <connection>scm:git:https://github.com/JavaMoney/javamoney-tck-usage-example.git</connection>
