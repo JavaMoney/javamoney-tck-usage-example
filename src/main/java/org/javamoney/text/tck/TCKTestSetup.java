@@ -20,8 +20,8 @@ import org.javamoney.moneta.Money;
 import org.javamoney.moneta.internal.JDKCurrencyAdapter;
 import org.javamoney.tck.JSR354TestConfiguration;
 
+import javax.money.Monetary;
 import javax.money.MonetaryOperator;
-import javax.money.MonetaryRoundings;
 import javax.money.convert.MonetaryConversions;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -74,7 +74,7 @@ public final class TCKTestSetup implements JSR354TestConfiguration {
     @Override
     public Collection<MonetaryOperator> getMonetaryOperators4Test() {
         List<MonetaryOperator> ops = new ArrayList<>();
-        ops.add(MonetaryRoundings.getDefaultRounding());
+        ops.add(Monetary.getDefaultRounding());
         ops.add(MonetaryConversions.getConversion("EUR"));
         return ops;
     }
