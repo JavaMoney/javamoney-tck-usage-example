@@ -7,107 +7,145 @@
 	THE BOTTOM OF THIS PAGE. Specification: JSR-354 Money and Currency API ("Specification") 
 	Copyright (c) 2012-2015, Credit Suisse All rights reserved. -->
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-    <modelVersion>4.0.0</modelVersion>
-    <parent> <!-- TODO use javamoney-examples as parent, as soon as it's on MavenCentral, too -->
-        <groupId>org.javamoney</groupId>
-        <artifactId>javamoney-parent</artifactId>
-        <version>1.0</version>
-    </parent>
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent> <!-- TODO use javamoney-examples as parent, as soon as it's on MavenCentral, 
+			too -->
+		<groupId>org.javamoney</groupId>
+		<artifactId>javamoney-parent</artifactId>
+		<version>1.0</version>
+	</parent>
 
-    <artifactId>javamoney-tck-usage-example</artifactId>
-    <packaging>jar</packaging>
-    <groupId>org.javamoney.examples</groupId>
-    <version>1.0.1-SNAPSHOT</version>
-    <name>JSR 354 - TCK Test (Java8)</name>
-    <description>JSR 354 provides an API for representing, transporting, and performing comprehensive calculations with
+	<artifactId>javamoney-tck-usage-example</artifactId>
+	<packaging>jar</packaging>
+	<groupId>org.javamoney.examples</groupId>
+	<version>1.0.1-SNAPSHOT</version>
+	<name>JSR 354 - TCK Test (Java8)</name>
+	<description>JSR 354 provides an API for representing, transporting, and performing comprehensive calculations with
         Money and Currency.
         This module executes the JSR 354 TCK and tests the current JSR 354 Reference Implementation impl. based on Java 8.
     </description>
 
-    <licenses>
-        <license>
-            <name>Apache 2 License</name>
-            <comments>Spec</comments>
-            <url>LICENSE.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
+	<licenses>
+		<license>
+			<name>Apache 2 License</name>
+			<comments>Spec</comments>
+			<url>LICENSE.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
 
-    <properties>
-        <!-- ************ TCK Setup ****************** -->
+	<properties>
+		<!-- ************ TCK Setup ****************** -->
 
-        <!-- 1) Your implementation artifact to be tested. -->
-        <impl.groupId>org.javamoney</impl.groupId>
-        <impl.artifactId>moneta</impl.artifactId>
-        <impl.version>1.0.1-SNAPSHOT</impl.version>
+		<!-- 1) Your implementation artifact to be tested. -->
+		<impl.groupId>org.javamoney</impl.groupId>
+		<impl.artifactId>moneta</impl.artifactId>
+		<impl.version>1.0.1-SNAPSHOT</impl.version>
+		<impl.type>jar</impl.type>
 
-        <!-- 2) JSR API version to be used. -->
-        <api.version>1.0</api.version>
-        <api.artifactId>money-api</api.artifactId>
+		<!-- 2) JSR API version to be used. -->
+		<api.version>1.0</api.version>
+		<api.artifactId>money-api</api.artifactId>
 
-        <!-- ************ Other settings, Should normally not be changed. ************ -->
-        <org.javamoney.tck.version>1.0.1-SNAPSHOT</org.javamoney.tck.version>
-        <jdkVersion>1.8</jdkVersion>
-        <maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
-        <maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    </properties>
+		<!-- ************ Other settings, Should normally not be changed. ************ -->
+		<org.javamoney.tck.version>1.0.1-SNAPSHOT</org.javamoney.tck.version>
+		<jdkVersion>1.8</jdkVersion>
+		<maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
+		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+			<testng.version>6.8.5</testng.version>
+	</properties>
 
-    <ciManagement>
-        <system>Travis CI</system>
-        <url>https://travis-ci.org/JavaMoney/javamoney-tck-usage-example</url>
-    </ciManagement>
+	<ciManagement>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/JavaMoney/javamoney-tck-usage-example</url>
+	</ciManagement>
 
-    <issueManagement>
-        <system>JIRA</system>
-        <url>http://java.net/jira/browse/JAVAMONEY</url>
-    </issueManagement>
+	<issueManagement>
+		<system>JIRA</system>
+		<url>http://java.net/jira/browse/JAVAMONEY</url>
+	</issueManagement>
 
-    <scm>
-        <connection>scm:git:https://github.com/JavaMoney/javamoney-tck-usage-example.git</connection>
-        <tag>master</tag>
-        <developerConnection>scm:git:https://github.com/JavaMoney/jsr354-tck-usage-example.git</developerConnection>
-        <url>https://github.com/JavaMoney/javamoney-tck-usage-example</url>
-    </scm>
+	<scm>
+		<connection>scm:git:https://github.com/JavaMoney/javamoney-tck-usage-example.git</connection>
+		<tag>master</tag>
+		<developerConnection>scm:git:https://github.com/JavaMoney/jsr354-tck-usage-example.git</developerConnection>
+		<url>https://github.com/JavaMoney/javamoney-tck-usage-example</url>
+	</scm>
 
-    <repositories>
-        <repository>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-            <id>bintray-release</id>
-            <name>libs-release</name>
-            <url>http://oss.jfrog.org/artifactory/libs-release</url>
-        </repository>
-        <repository>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <id>bintray-snapshot</id>
-            <name>libs-snapshot</name>
-            <url>http://oss.jfrog.org/artifactory/libs-snapshot</url>
-        </repository>
-    </repositories>
+	<repositories>
+		<repository>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+			<id>bintray-release</id>
+			<name>libs-release</name>
+			<url>http://oss.jfrog.org/artifactory/libs-release</url>
+		</repository>
+		<repository>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+			<id>bintray-snapshot</id>
+			<name>libs-snapshot</name>
+			<url>http://oss.jfrog.org/artifactory/libs-snapshot</url>
+		</repository>
+	</repositories>
 
-    <dependencies>
-        <dependency>
-            <groupId>org.javamoney</groupId>
-            <artifactId>javamoney-tck</artifactId>
-            <version>${org.javamoney.tck.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>${impl.groupId}</groupId>
-            <artifactId>${impl.artifactId}</artifactId>
-            <type>pom</type>
-            <version>${impl.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.money</groupId>
-            <artifactId>${api.artifactId}</artifactId>
-            <type>jar</type>
-            <version>${api.version}</version>
-        </dependency>
-    </dependencies>
+	<dependencies>
+		<dependency>
+			<groupId>org.javamoney</groupId>
+			<artifactId>javamoney-tck</artifactId>
+			<version>${org.javamoney.tck.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${impl.groupId}</groupId>
+			<artifactId>${impl.artifactId}</artifactId>
+			<version>${impl.version}</version>
+			<type>${impl.type}</type>
+		</dependency>
+		<!-- 
+		<dependency>
+			<groupId>${impl.groupId}</groupId>
+			<artifactId>moneta-parent</artifactId>
+			<version>${impl.version}</version>
+			<type>${impl.type}</type>
+		</dependency>
+		<dependency>
+			<groupId>${impl.groupId}.moneta</groupId>
+			<artifactId>moneta-core</artifactId>
+			<version>${impl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${impl.groupId}.moneta</groupId>
+			<artifactId>moneta-convert</artifactId>
+			<version>${impl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${impl.groupId}.moneta</groupId>
+			<artifactId>moneta-convert-ecb</artifactId>
+			<version>${impl.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>${impl.groupId}.moneta</groupId>
+			<artifactId>moneta-convert-imf</artifactId>
+			<version>${impl.version}</version>
+		</dependency>
+		 -->
+		 
+		<dependency>
+			<groupId>javax.money</groupId>
+			<artifactId>${api.artifactId}</artifactId>
+			<type>jar</type>
+			<version>${api.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 </project>

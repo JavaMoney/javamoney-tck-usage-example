@@ -15,6 +15,8 @@
  */
 package org.javamoney.test.tck;
 
+import static org.testng.Assert.assertEquals;
+
 import javax.tools.Tool;
 
 import org.javamoney.tck.TCKRunner;
@@ -24,7 +26,9 @@ public class RunTCKTest {
 
     @Test
     public void runTCK(){
-    	 Tool runner = new TCKRunner();
-    	 runner.run(System.in, System.out, System.err, new String[0]);
+//    	 Tool runner = new TCKRunner();
+//    	 int result = runner.run(System.in, System.out, System.err, new String[0]);
+//    	 assertEquals(0, result);
+     	TCKRunner.main(new String[0]);
     }
 }
