@@ -29,7 +29,6 @@
 	<licenses>
 		<license>
 			<name>Apache 2 License</name>
-			<comments>Spec</comments>
 			<url>LICENSE.txt</url>
 			<distribution>repo</distribution>
 		</license>
