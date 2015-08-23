@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2012, 2014, Credit Suisse (Anatole Tresch), Werner Keil and others by the @author tag.
+ * Copyright (c) 2012, 2015, Credit Suisse, Anatole Tresch, Werner Keil and others by the @author tag.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -15,6 +15,8 @@
  */
 package org.javamoney.test.tck;
 
+import javax.tools.Tool;
+
 import org.javamoney.tck.TCKRunner;
 import org.testng.annotations.Test;
 
@@ -22,6 +24,7 @@ public class RunTCKTest {
 
     @Test
     public void runTCK(){
-        TCKRunner.main(new String[0]);
+    	 Tool runner = new TCKRunner();
+    	 runner.run(System.in, System.out, System.err, new String[0]);
     }
 }

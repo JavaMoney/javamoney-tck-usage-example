@@ -17,9 +17,9 @@
 
     <artifactId>javamoney-tck-usage-example</artifactId>
     <packaging>jar</packaging>
-
+    <groupId>org.javamoney.examples</groupId>
+    <version>1.0.1-SNAPSHOT</version>
     <name>JSR 354 - TCK Test (Java8)</name>
-
     <description>JSR 354 provides an API for representing, transporting, and performing comprehensive calculations with
         Money and Currency.
         This module executes the JSR 354 TCK and tests the current JSR 354 Reference Implementation impl. based on Java 8.
@@ -40,15 +40,14 @@
         <!-- 1) Your implementation artifact to be tested. -->
         <impl.groupId>org.javamoney</impl.groupId>
         <impl.artifactId>moneta</impl.artifactId>
-        <impl.version>1.0</impl.version>
-        <impl.packageType>jar</impl.packageType>
+        <impl.version>1.0.1-SNAPSHOT</impl.version>
 
         <!-- 2) JSR API version to be used. -->
         <api.version>1.0</api.version>
         <api.artifactId>money-api</api.artifactId>
 
         <!-- ************ Other settings, Should normally not be changed. ************ -->
-        <org.javamoney.tck.version>1.0</org.javamoney.tck.version>
+        <org.javamoney.tck.version>1.0.1-SNAPSHOT</org.javamoney.tck.version>
         <jdkVersion>1.8</jdkVersion>
         <maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
         <maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
@@ -101,7 +100,7 @@
         <dependency>
             <groupId>${impl.groupId}</groupId>
             <artifactId>${impl.artifactId}</artifactId>
-            <type>${impl.packageType}</type>
+            <type>pom</type>
             <version>${impl.version}</version>
         </dependency>
         <dependency>
@@ -111,5 +110,4 @@
             <version>${api.version}</version>
         </dependency>
     </dependencies>
-    <groupId>org.javamoney.examples</groupId>
 </project>
