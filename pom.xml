@@ -42,7 +42,7 @@
 		<impl.groupId>org.javamoney</impl.groupId>
 		<impl.artifactId>moneta</impl.artifactId>
 		<impl.version>1.0.1-SNAPSHOT</impl.version>
-		<impl.type>jar</impl.type>
+		<impl.packageType>jar</impl.packageType>
 
 		<!-- 2) JSR API version to be used. -->
 		<api.version>1.0</api.version>
@@ -55,7 +55,7 @@
 		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-			<testng.version>6.8.5</testng.version>
+		<testng.version>6.8.5</testng.version>
 	</properties>
 
 	<ciManagement>
@@ -104,7 +104,7 @@
 			<groupId>${impl.groupId}</groupId>
 			<artifactId>${impl.artifactId}</artifactId>
 			<version>${impl.version}</version>
-			<type>${impl.type}</type>
+			<type>${impl.packageType}</type>
 		</dependency>
 		<!-- 
 		<dependency>
