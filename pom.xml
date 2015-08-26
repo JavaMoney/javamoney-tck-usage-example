@@ -98,6 +98,12 @@
 			<groupId>org.javamoney</groupId>
 			<artifactId>javamoney-tck</artifactId>
 			<version>${org.javamoney.tck.version}</version>
+			<exclusions>
+				<exclusion>  <!-- We only need this for the Java 8 version -->
+					<groupId>org.javamoney</groupId>
+					<artifactId>moneta-bp</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>${impl.groupId}</groupId>
@@ -105,7 +111,7 @@
 			<version>${impl.version}</version>
 			<type>${impl.packageType}</type>
 		</dependency>
-		 
+
 		<dependency>
 			<groupId>javax.money</groupId>
 			<artifactId>${api.artifactId}</artifactId>
