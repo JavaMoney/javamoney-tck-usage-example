@@ -98,6 +98,20 @@
 			<groupId>org.javamoney</groupId>
 			<artifactId>javamoney-tck</artifactId>
 			<version>${org.javamoney.tck.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>moneta-bp</artifactId>
+					<groupId>org.javamoney</groupId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.javamoney.moneta</groupId>
+					<artifactId>moneta-core</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.javamoney</groupId>
+					<artifactId>moneta-core</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>${impl.groupId}</groupId>
@@ -105,35 +119,16 @@
 			<version>${impl.version}</version>
 			<type>${impl.packageType}</type>
 		</dependency>
-		<!-- 
-		<dependency>
-			<groupId>${impl.groupId}</groupId>
-			<artifactId>moneta-parent</artifactId>
-			<version>${impl.version}</version>
-			<type>${impl.type}</type>
-		</dependency>
-		<dependency>
-			<groupId>${impl.groupId}.moneta</groupId>
-			<artifactId>moneta-core</artifactId>
-			<version>${impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${impl.groupId}.moneta</groupId>
-			<artifactId>moneta-convert</artifactId>
-			<version>${impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${impl.groupId}.moneta</groupId>
-			<artifactId>moneta-convert-ecb</artifactId>
-			<version>${impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${impl.groupId}.moneta</groupId>
-			<artifactId>moneta-convert-imf</artifactId>
-			<version>${impl.version}</version>
-		</dependency>
-		 -->
-		 
+		<!-- <dependency> <groupId>${impl.groupId}</groupId> <artifactId>moneta-parent</artifactId> 
+			<version>${impl.version}</version> <type>${impl.type}</type> </dependency> 
+			<dependency> <groupId>${impl.groupId}.moneta</groupId> <artifactId>moneta-core</artifactId> 
+			<version>${impl.version}</version> </dependency> <dependency> <groupId>${impl.groupId}.moneta</groupId> 
+			<artifactId>moneta-convert</artifactId> <version>${impl.version}</version> 
+			</dependency> <dependency> <groupId>${impl.groupId}.moneta</groupId> <artifactId>moneta-convert-ecb</artifactId> 
+			<version>${impl.version}</version> </dependency> <dependency> <groupId>${impl.groupId}.moneta</groupId> 
+			<artifactId>moneta-convert-imf</artifactId> <version>${impl.version}</version> 
+			</dependency> -->
+
 		<dependency>
 			<groupId>javax.money</groupId>
 			<artifactId>${api.artifactId}</artifactId>
