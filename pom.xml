@@ -41,7 +41,7 @@
 		<impl.groupId>org.javamoney</impl.groupId>
 		<impl.artifactId>moneta</impl.artifactId>
 		<impl.version>1.0.1-SNAPSHOT</impl.version>
-		<impl.packageType>pom</impl.packageType>
+		<impl.packageType>jar</impl.packageType>
 
 		<!-- 2) JSR API version to be used. -->
 		<api.version>1.0</api.version>
