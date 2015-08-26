@@ -41,7 +41,7 @@
 		<impl.groupId>org.javamoney</impl.groupId>
 		<impl.artifactId>moneta</impl.artifactId>
 		<impl.version>1.0.1-SNAPSHOT</impl.version>
-		<impl.packageType>jar</impl.packageType>
+		<impl.packageType>pom</impl.packageType>
 
 		<!-- 2) JSR API version to be used. -->
 		<api.version>1.0</api.version>
@@ -105,34 +105,6 @@
 			<version>${impl.version}</version>
 			<type>${impl.packageType}</type>
 		</dependency>
-		<!-- 
-		<dependency>
-			<groupId>${impl.groupId}</groupId>
-			<artifactId>moneta-parent</artifactId>
-			<version>${impl.version}</version>
-			<type>${impl.type}</type>
-		</dependency>
-		<dependency>
-			<groupId>${impl.groupId}.moneta</groupId>
-			<artifactId>moneta-core</artifactId>
-			<version>${impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${impl.groupId}.moneta</groupId>
-			<artifactId>moneta-convert</artifactId>
-			<version>${impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${impl.groupId}.moneta</groupId>
-			<artifactId>moneta-convert-ecb</artifactId>
-			<version>${impl.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>${impl.groupId}.moneta</groupId>
-			<artifactId>moneta-convert-imf</artifactId>
-			<version>${impl.version}</version>
-		</dependency>
-		 -->
 		 
 		<dependency>
 			<groupId>javax.money</groupId>
