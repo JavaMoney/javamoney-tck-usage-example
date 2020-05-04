@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2012, 2015, Credit Suisse (Anatole Tresch), Werner Keil and others by the @author tag.
+ * Copyright (c) 2012, 2020, Anatole Tresch, Werner Keil and others by the @author tag.
  *
  * Licensed under the Apache License, Version 2.0 (the "License"); you may not
  * use this file except in compliance with the License. You may obtain a copy of
@@ -17,7 +17,7 @@ package org.javamoney.test.tck;
 
 import org.javamoney.moneta.FastMoney;
 import org.javamoney.moneta.Money;
-import org.javamoney.moneta.internal.JDKCurrencyAdapter;
+import org.javamoney.moneta.spi.JDKCurrencyAdapter;
 import org.javamoney.tck.JSR354TestConfiguration;
 
 import javax.money.Monetary;
@@ -62,7 +62,7 @@ public final class TCKTestSetup implements JSR354TestConfiguration {
 			e.printStackTrace();
 			throw new RuntimeException(
 					"Currency class not loadable: "
-							+ org.javamoney.moneta.internal.JDKCurrencyAdapter.class
+							+ org.javamoney.moneta.spi.JDKCurrencyAdapter.class
 									.getName());
 		}
 	}

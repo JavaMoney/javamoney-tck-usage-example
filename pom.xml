@@ -13,7 +13,7 @@
 			too -->
 		<groupId>org.javamoney</groupId>
 		<artifactId>javamoney-parent</artifactId>
-		<version>1.1-SNAPSHOT</version>
+		<version>1.1</version>
 	</parent>
 
 	<artifactId>javamoney-tck-usage-example</artifactId>
@@ -39,15 +39,15 @@
 		<!-- 1) Your implementation artifact to be tested. -->
 		<impl.groupId>org.javamoney</impl.groupId>
 		<impl.artifactId>moneta</impl.artifactId>
-		<impl.version>1.4-SNAPSHOT</impl.version>
+		<impl.version>1.4</impl.version>
 		<impl.packageType>pom</impl.packageType>
 
 		<!-- 2) JSR API version to be used. -->
-		<api.version>1.1-SNAPSHOT</api.version>
+		<api.version>1.1</api.version>
 		<api.artifactId>money-api</api.artifactId>
 
 		<!-- ************ Other settings, Should normally not be changed. ************ -->
-		<javamoney.tck.version>1.1-SNAPSHOT</javamoney.tck.version>
+		<javamoney.tck.version>1.1</javamoney.tck.version>
 		<jdkVersion>1.8</jdkVersion>
 		<maven.compile.targetLevel>${jdkVersion}</maven.compile.targetLevel>
 		<maven.compile.sourceLevel>${jdkVersion}</maven.compile.sourceLevel>
@@ -80,7 +80,7 @@
 			</snapshots>
 			<id>bintray-release</id>
 			<name>libs-release</name>
-			<url>http://oss.jfrog.org/artifactory/libs-release</url>
+			<url>https://oss.jfrog.org/artifactory/libs-release</url>
 		</repository>
 		<repository>
 			<snapshots>
@@ -88,7 +88,7 @@
 			</snapshots>
 			<id>bintray-snapshot</id>
 			<name>libs-snapshot</name>
-			<url>http://oss.jfrog.org/artifactory/libs-snapshot</url>
+			<url>https://oss.jfrog.org/artifactory/libs-snapshot</url>
 		</repository>
 	</repositories>
 
